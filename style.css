@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.logo{
+    margin-left: 50px; 
+}
+.thala{
+    color: orange;
+}
+.no{
+    color: deepskyblue;
+}
+.navigation ul{
+    display: flex;
+    padding: 10px;
+    gap: 40px;
+    list-style: none;
+}
+.navigation li{
+    background-color: orange;
+    padding: 10px;
+    border-radius:20px;
+    transition-duration: 0.2s;
+}
+.navigation a{
+    text-decoration: none;
+    font: 1em sans-serif;
+    color: rgb(255, 255, 255);
+}
+.navigation li:hover{
+    transform: scale(1.2);
+    border: 2px solid darkblue;
+}
+.navigation a:hover{
+     color: beige;
+}
+.parentright{
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+}
+.parentright input{
+  height: 20px;
+}
+.cart{
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 50%;
+  transition-duration: 0.5s;
+}
+.profile-pic{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    object-fit: cover;
+    cursor: pointer;
+    transition-duration:0.5s;
+}
+.profile-pic:hover{
+    transform: scale(1.2);
+    border-color:orange;
+}
+.cart:hover{
+    transform: scale(1.2);
+    border-color: orange;
+}
+
+.searchbox{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    transition: 0.5s;
+}
+.searchbox input{
+    border: none;
+    outline: none;
+}
+.searchbox:hover{
+   transform: scale(1.2);
+    border-color: orange;
+}
+
+
+/* hero section */
+#herosection{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-left: 100px;
+}
+.left h1{
+    font-size: 100px;
+}
+.left p{
+    padding: 10px;
+}
+.left button{
+    height: 50px;
+    background-color: orange;
+    color: white;
+    font-size: large;
+    z-index: 2;
+    transition-duration: 0.7s;
+    border-radius: 25px;
+
+}
+.left button:hover{
+    transform: scale(1.1);
+}
+.imgh{
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+
+    height: 650px;
+    width: 650px;
+    z-index: 1;
+    animation: shoe 2s linear  infinite alternate-reverse ;
+}
+
+@keyframes shoe{
+    0%{
+        transform: translatey(-50px);      
+    }100%{
+        transform: translatey(50px);
+    }
+}
+
+/* serviceoverview */
+.serviceocerview{
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    background-color: orange;
+    padding: 25px;
+}
+.serviceocerview li{
+    margin-left: 50px;
+    margin-right: 50px;
+    color: white;
+    list-style: none;
+    
+}
+.bold{
+    font-size: 30px;
+}
+.bold:hover{
+    color: red;
+}
+
+/* Product Display */
+#productdisplay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productleft{
+    display:flex ;
+    height: 800px;
+    width: 800px;
+    flex-direction: column;
+}
+
+.productright{
+    flex-direction: column;
+    display: flex;
+    align-items: baseline;
+    justify-content:space-evenly;
+    margin-bottom: 250px;
+    
+}
+
+.namediscription h1{
+    align-self: flex-start;
+    font-size: 70px;
+}
+
+
+.namediscription p{
+    font-size: large;
+}
+
+
+.pricedetailed{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pricedetailed h3{
+  font-size: 30px;
+}
+.cardq{
+    display: flex;
+    gap: 20px;
+}
+
+.quantity{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.quantity{
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: 1px solid orange;
+}
+.cardq button{
+    margin-top: 22px;
+    height: 36PX;
+    width: 250px;
+    border: 1px solid ;
+    border-radius: 20px;
+    background-color: orange ;
+    color: white;
+    transition: 0.5s;
+}
+
+.cardq button:hover{
+    transform: scale(1.1);
+}
+
+/* shoe container */
+.shoe-gallery{
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding: 30px;
+    margin-top: 0px;
+}
+
+.shoe-gallery::-webkit-scrollbar{
+    height: 10px;
+}
+
+.shoe-card{
+    min-width: 350px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.shoe-card img{
+    width: 250px;
+    transition: 0.5s;
+}
+
+.shoe-card img:hover{
+    transform: scale(1.1) rotate(-10deg);
+}
