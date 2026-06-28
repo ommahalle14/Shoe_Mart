@@ -132,10 +132,8 @@ header{
     align-self: center;
     flex-direction: column;
 
-    height: 650px;
-    width: 650px;
+    height: 600px;
     z-index: 1;
-    animation: shoe 2s linear  infinite alternate-reverse ;
 }
 
 @keyframes shoe{
@@ -169,26 +167,37 @@ header{
 }
 
 /* Product Display */
+#productdis{
+    margin-bottom: 7%;
+}
 #productdisplay{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;   /* Makes both sides parallel */
+    gap: 80px;
+    padding: 60px 80px;
 }
 
 .productleft{
-    display:flex ;
-    height: 800px;
-    width: 800px;
-    flex-direction: column;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: shoe 2s linear  infinite alternate-reverse ;
+}
+
+.productleft img{
+    width: 500px;
+    max-width: 100%;
 }
 
 .productright{
-    flex-direction: column;
+    width: 50%;
     display: flex;
-    align-items: baseline;
-    justify-content:space-evenly;
-    margin-bottom: 250px;
-    
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 0;      /* Remove 250px */
 }
 
 .namediscription h1{
@@ -247,32 +256,290 @@ header{
 /* shoe container */
 .shoe-gallery{
     display: flex;
-    gap: 30px;
+    gap: 20px;
     overflow-x: auto;
-    padding: 30px;
-    margin-top: 0px;
+    padding: 20px 60px;
+    margin-top: -20px;
+    scroll-behavior: smooth;
 }
 
 .shoe-gallery::-webkit-scrollbar{
-    height: 10px;
+    height: 8px;
 }
 
 .shoe-card{
-    min-width: 350px;
-    height: 300px;
-    border-radius: 20px;
-    background-color: #f5f5f5;
+    min-width: 180px;
+    width: 180px;
+    height: 180px;
+    border-radius: 15px;
+    background: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+    transition: 0.3s;
+}
+
+.shoe-card:hover{
+    transform: translateY(-8px);
 }
 
 .shoe-card img{
-    width: 250px;
-    transition: 0.5s;
+    width: 140px;
+    transition: .3s;
 }
 
 .shoe-card img:hover{
-    transform: scale(1.1) rotate(-10deg);
+    transform: scale(1.08) rotate(-8deg);
+}
+
+
+/* shoping card section */
+.sleftright{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 77px;
+    padding: 40px;
+}
+
+.left{
+    flex: 2;
+}
+
+.right{
+    flex: 1;
+    background: #f8f8f8;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+}
+
+.info-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info-table th,
+.info-table td{
+    padding: 18px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.info-table th{
+    background: orange;
+    color: white;
+}
+
+.info-table button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background: orange;
+    color: white;
+    cursor: pointer;
+}
+
+.coupon{
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.coupon input{
+    flex: 1;
+    padding: 10px;
+}
+
+.coupon button{
+    padding: 10px 18px;
+    background: orange;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+.total{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.checkout-btn{
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: orange;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.secure{
+    display: flex;
+    height: 40px;
+    width: 600px;
+    gap: 20px;
+    /* margin-top: 30px; */
+}
+#razorpay{
+    align-self: flex-start;
+    height: 80px;
+    width: 80px;
+}
+#sec{
+    margin-top: 20px;
+     height: 40px;
+    width: 80px;
+}
+.back {
+    padding: 40px;
+    font-size: x-large;
+    font-style: none;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#aa{
+     text-decoration: none;
+}
+.checkout-btn:hover{
+    transform: scale(1.05);
+}
+
+/* Payment Section */
+.checkout{
+    margin-left: 100px;
+    padding: 20px;
+    font-family:sans-serif;
+    font-size: xx-large;
+    display: flex;
+}
+
+.pleftright{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 100px;
+}
+.pleft{
+   margin-left: 50px;
+}
+.pright{
+    margin-right: 50px;
+}
+
+.pleft h4{
+    font-size:x-large;
+    padding: 20px;
+}
+
+#email{
+    font-size: large;
+    padding: 20px;
+}
+#emaill{
+    width: 300px;
+    height: 25px;
+    border: 1px solid deepskyblue;
+    border-radius: 10px;
+}
+.card ul{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    gap: 30px;
+}
+.card li{
+    padding: 20px;
+    border: 1px solid orange;
+    border-radius: 5px;
+    list-style: none;
+    transition: 0.5s;
+}
+.card li a{
+    text-decoration: none;
+}
+.card li:hover{
+    border-radius: 0%;
+    border: 1px solid red;
+    transform: scale(1.1);
+}
+
+.detailss{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    padding: 20px;
+}
+
+#card{
+   font-size: 20px;
+}
+#cardd{
+    height: 25px;
+    margin-bottom: 20px;
+    border:1px solid deepskyblue;
+    border-radius: 5px;
+}
+
+.formatrf{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 60px;
+}
+.formatrf label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.formatrf input{
+ border: 1px solid deepskyblue;
+ border-radius: 10px;
+ transition: 0.5s;
+}
+.formatrf input:hover{
+   
+    border-radius: 0%;
+    transform: scale(1.05);
+    border: 1px solid orange;
+}
+.formatl{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.formatr{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#expp{
+    padding: 20px;
+    margin-bottom: 20px;
+}
+#cvcc{
+    padding: 20px;
+    margin-bottom: 20px;
+}
+#zipp{
+    padding: 20px;
+}
+#countryy{
+    padding: 20px;
 }
